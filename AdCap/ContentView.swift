@@ -10,7 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            TabView {
+                MainPageView().tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                
+                UpgradePageView().tabItem {
+                    Image(systemName: "dollarsign.square")
+                    Text("Upgrade")
+                }
+            }
+        }
     }
 }
 
